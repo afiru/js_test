@@ -3,7 +3,13 @@ window.name = 'John';
 const person = {
     name: 'Tom',
     hello: function() {
-        console.log('Hello ' + this.name);
+        //console.log('Hello ' + this.name);
     }
 }
-person.hello();
+
+
+function fn(ref){
+    console.log(person);
+    //let v = person.hello;
+}
+fn(person);
