@@ -40,10 +40,12 @@
  * 
  */
 
+
+
 class MyLibrary {
 	constructor() {
 		events.emit('beforeInit');
-	
+		
 		console.log('library process');
 		
 		events.emit('afterInit');
@@ -52,3 +54,5 @@ class MyLibrary {
 		// do something
 	}
 }
+
+

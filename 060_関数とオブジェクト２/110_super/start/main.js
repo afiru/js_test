@@ -7,6 +7,10 @@ class Person {
     hello() {
         console.log('hello ' + this.name);
     }
+    
+    bye() {
+        console.log('Sayonara ' + this.name);
+    }
 }
 
 class Japanese extends Person {
@@ -26,9 +30,23 @@ class Japanese extends Person {
 }
 
 const taro = new Japanese('Taro', 23, 'Male');
-console.log(taro);
-taro.bye();
+//console.log(taro);
+//taro.bye();
 
+const american = {
+    hello(){
+        
+        console.log(this.name);
+    }
+}
+const bob = {
+    name:'Bob',
+    hello(){
+        console.log('こんにちは'+this.name);
+    }
+}
+Object.setPrototypeOf(american,bob);
+american.hello();
 // const american = {
 //     hello() {
 //         console.log('hello ' + this.name);

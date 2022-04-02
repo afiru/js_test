@@ -6,6 +6,25 @@
     <title>Document</title>
 </head>
 <body>
+<style>
+
+.clock {
+    background:#000;
+    font-family: 'Share Tech Mono', monospace;
+    color: #daf6ff; /* 文字の色 */
+    text-shadow: 0 0 20px #0aafe6; /* 文字を発光させる */
+    line-height: 1.2; /* 文字の高さ */
+    text-align: center; /* 文字を中央に寄せる */
+}
+
+.clock-date {
+    font-size: 25px;
+}
+
+.clock-time {
+    font-size: 100px;
+}
+</style>
     <script>
         const span = document.createElement('span');
         span.textContent = decodeURI(window.location.pathname);
@@ -25,6 +44,13 @@
             コースへ
         </a>
     </div>
+    <div class="container">
+  <!-- 時計 -->
+  <div class="clock">
+    <p class="clock-date"></p><!-- 時計の日付テキスト -->
+    <p class="clock-time"></p><!-- 時計の時間テキスト -->
+  </div>
+ </div>
     <script src="main.js"></script>
 </body>
 </html>

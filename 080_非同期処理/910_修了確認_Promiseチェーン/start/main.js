@@ -35,3 +35,19 @@ async function myFetch(fileName) {
 	const json = await response.json();
 	return json;
 }
+(async function(){
+	const me = await myFetch('user1.json');
+	//console.log(`${me.name}`)
+	document.getElementById('hanahada').textContent = me.name;
+
+	const friendList = await myFetch(`friendsOf${me.id}.json`);
+	//console.log(friendList);
+
+	const friendIds = new Set();
+	for(const id of friendList.friendIds){
+		friendIds.add(myFetch(`user${id}.json`))
+	}
+	
+	const friends = await Promise.all(friendIds);
+	console.log(friendIds);
+})();

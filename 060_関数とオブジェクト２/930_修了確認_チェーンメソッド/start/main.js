@@ -23,15 +23,29 @@
  * 	.mutiply()
  * 	.set(6) -> '42'を出力（10 - 3) * 6
  */
-
+class Calculator{
+	constructor(){
+		this.val = null;
+	}
+	set(val){
+		if(val===null){
+			this.val = val;
+		}else{
+			this.val+val;
+			console.log(this.val+val);
+			console.log("aaa");
+		}
+	}
+	
+}
 const calc = new Calculator();
 
 calc.set(10)
-	.minus()
-	.set(3)
-	.mutiply()
+	//.plus()
+	//.set(3)
+/* 	.multiply()
 	.set(6)
 	.divide()
 	.set(2)
 	.plus()
-	.set(2)
+	.set(2) */
